@@ -7,4 +7,4 @@ RUN wget $(curl -s https://api.github.com/repos/openbullet/OpenBullet2/releases/
 RUN unzip OpenBullet2.zip
 RUN cp -r ./OpenBullet2/* . && rm -rf ./OpenBullet2 && rm OpenBullet2.zip
 EXPOSE 5000
-CMD ["dotnet", "./OpenBullet2.dll", "--urls=http://*:5000"]
+CMD ["dotnet", "./OpenBullet2.dll", "--urls=http://*:80"]
